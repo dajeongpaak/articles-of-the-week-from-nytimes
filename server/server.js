@@ -23,11 +23,10 @@ app.listen(PORT, () => {
 });
 
     // Serve Frontend
-if(process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, '../build')))
 
-    app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'))
-} 
+app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'))
+
     // Middleware
     // every incoming request body will be parsed in JSON format through app.use middleware function
 app.use(express.json());
@@ -40,7 +39,7 @@ app.use(cors());
 
     // this allows communication between its client-side and this server and access the server's resources, ensuring security 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://www.articles-of-the-week.dajeongpark.com ');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -54,7 +53,7 @@ server: mailChimpServer,
     // a POST request is sent to /signup route
     // again by setting header it helps communicate between client and server
 app.post('/signup', async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin', 'http://www.articles-of-the-week.dajeongpark.com ');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 

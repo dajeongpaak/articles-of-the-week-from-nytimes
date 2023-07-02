@@ -39,9 +39,8 @@
     "eject": "react-scripts eject",
     "server": "nodemon server/server.js",
     "dev": "concurrently \"npm run server\" \"npm start\"", 
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build && npm run server"
   },
-  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": [
       "react-app",
