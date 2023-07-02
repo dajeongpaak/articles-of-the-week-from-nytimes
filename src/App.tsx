@@ -13,7 +13,7 @@ function App() {
     <ArticleProvider>
       <Header 
         title='The Most Viewed Articles for the last 7 days'
-        projectName='New York Times API Project'
+        projectName='Articles of the Week from NY Times'
       />
       <CardList />
       <SignUpForm 

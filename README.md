@@ -4,7 +4,7 @@ Articles of the Week from NY Times is a web application that provides users with
 
 In addition to article viewing, the application offers a newsletter subscription feature, allowing users to stay up-to-date with the latest articles and receive weekly updates directly in their email inbox. By subscribing to the newsletter, users can ensure they never miss out on important news and stay connected with the NY Times.
 
-[Live Site](https://example.com) 🚀
+[Live Site](http://articles-of-the-week.dajeongpark.com) 🚀
 
 ## Table of Contents
 

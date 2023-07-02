@@ -39,7 +39,7 @@ app.use(cors());
 
     // this allows communication between its client-side and this server and access the server's resources, ensuring security 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://www.articles-of-the-week.dajeongpark.com ');
+    res.setHeader('Access-Control-Allow-Origin', 'http://articles-of-the-week.dajeongpark.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
     next();
@@ -53,7 +53,7 @@ server: mailChimpServer,
     // a POST request is sent to /signup route
     // again by setting header it helps communicate between client and server
 app.post('/signup', async (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', 'http://www.articles-of-the-week.dajeongpark.com ');
+    res.setHeader('Access-Control-Allow-Origin', 'http://articles-of-the-week.dajeongpark.com');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
