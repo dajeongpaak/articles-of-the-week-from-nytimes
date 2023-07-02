@@ -6,6 +6,7 @@ const axios = require('axios');
 const client = require("@mailchimp/mailchimp_marketing");
 const nodemailer = require('nodemailer');
 const cron = require('node-cron');
+const moment = require('moment-timezone');
 
 const apiKey = process.env.NY_TIMES_API_KEY;
 const mailChimpAPIKey = process.env.MAILCHIMP_API_KEY;
@@ -87,7 +88,9 @@ app.post('/signup', async (req, res) => {
 
 });
 
-cron.schedule('0 7 * * 0', () => {
+const timeZone = 'America/Vancouver';
+
+cron.schedule('0 13 * * 0', () => {
 
         // retrieve the email addresses through MailChimp API
     const getMembersEmails = async () => {
@@ -625,5 +628,7 @@ cron.schedule('0 7 * * 0', () => {
 
     sendEmail();
 
+}, {
+    timezone: timeZone
 });
 
