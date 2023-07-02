@@ -23,6 +23,10 @@ In addition to article viewing, the application offers a newsletter subscription
 
 ![Backend](https://skillicons.dev/icons?i=nodejs,express)
 
+> Deployment
+
+![Heroku](https://skillicons.dev/icons?i=heroku)
+
 > APIs
 
 - MailChimp API <br/>
