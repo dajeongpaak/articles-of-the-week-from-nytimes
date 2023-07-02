@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# Articles of the Week from NY Times
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Articles of the Week from NY Times is a web application that provides users with the ability to view the most viewed articles from the New York Times for the last 7 days. With a simple and user-friendly interface, users can easily access and stay informed about the latest news and trending topics.
 
-## Available Scripts
+In addition to article viewing, the application offers a newsletter subscription feature, allowing users to stay up-to-date with the latest articles and receive weekly updates directly in their email inbox. By subscribing to the newsletter, users can ensure they never miss out on important news and stay connected with the NY Times.
 
-In the project directory, you can run:
+[Live Site](https://example.com) 🚀
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Technologies Used](#technologies-used)
+- [Key Features](#key-features)
+- [Acknowledgments](#acknowledgments)
+- [Contact Information](#contact-information)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+> Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Frontend](https://skillicons.dev/icons?i=react,ts,bootstrap)
 
-### `npm run build`
+> Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Backend](https://skillicons.dev/icons?i=nodejs,express)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> APIs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- MailChimp API <br/>
+- New York Times API
 
-### `npm run eject`
+> Misc
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Nodemailer : Library for **sending emails**<br/>
+- dotenv: For handling **environment variables** in the project<br/>
+- CORS: Middleware to enable **Cross-Origin Resource Sharing**<br/>
+- axios: HTTP client for making **API requests**<br/>
+- cron: Library for **scheduling tasks** at specific intervals
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Key Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Discover popular articles from the New York Times
+- Filter by category
+- Newsletter subscription
+- User-friendly interface
+- Responsive design
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Acknowledgments
 
-## Learn More
+- [NY Times API](https://developer.nytimes.com/) - News articles data source.
+- [MailChimp API](https://mailchimp.com/developer/) - Email address storage and management.
+- [Nodemailer](https://nodemailer.com/) - Library for sending emails.
+- [Email template](https://github.com/leemunroe/responsive-html-email-template) - Open-source email template.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact Information
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+For any questions or feedback, please reach out to me at hello@dajeongpark.com.<br/>
+
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)

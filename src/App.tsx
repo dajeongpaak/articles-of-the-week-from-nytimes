@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
+
+import Header from './components/Header';
+import Footer from './components/Footer'
+import CardList from './components/card/CardList';
+import SignUpForm from './components/form/SignUpForm';
+import { ArticleProvider } from './context/ArticleContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ArticleProvider>
+      <Header 
+        title='The Most Viewed Articles for the last 7 days'
+        projectName='New York Times API Project'
+      />
+      <CardList />
+      <SignUpForm 
+        title='Subscribe for Weekly Updates: 
+        '
+        subtitle='Stay Up-to-Date with the Latest News and Insights.'/>
+      <Footer/>
+    </ArticleProvider>
   );
 }
 
