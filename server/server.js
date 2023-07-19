@@ -26,6 +26,12 @@ app.listen(PORT, () => {
     // Serve Frontend
 app.use(express.static(path.join(__dirname, '../build')))
 
+app.use((err, req, res, next) => {
+    // Handle the error
+    console.error(err);
+    res.status(500).send('Internal Server Error');
+  });
+
 app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'))
 
     // Middleware
@@ -363,7 +369,6 @@ cron.schedule('0 13 * * 0', () => {
             .btn-primary table td {
             background-color: #3498db; 
             }
-
             .btn-primary a {
             background-color: #3498db;
             border-color: #3498db;
