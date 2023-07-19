@@ -24,15 +24,9 @@ app.listen(PORT, () => {
 });
 
     // Serve Frontend
-app.use(express.static(path.join(__dirname, '../build')))
+app.use(express.static(path.join(__dirname, '../build')));
 
-app.use((err, req, res, next) => {
-    // Handle the error
-    console.error(err);
-    res.status(500).send('Internal Server Error');
-  });
-
-app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'))
+app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'));
 
     // Middleware
     // every incoming request body will be parsed in JSON format through app.use middleware function

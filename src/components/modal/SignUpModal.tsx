@@ -1,10 +1,8 @@
-import { useState } from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Modal, Button } from 'react-bootstrap'
 
 export default function SignUpModal( {open, handleClick, title, content}: any ) {
-  const [show, setShow] = useState<boolean>(true);
 
   return (
     <>
