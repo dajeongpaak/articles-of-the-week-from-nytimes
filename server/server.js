@@ -19,14 +19,27 @@ const app = express();
 
 const PORT = process.env.PORT || 5000;
 
+const buildPath = path.join(__dirname, "../build");
+
+app.use(express.static(buildPath));
+
 app.listen(PORT, () => { 
     console.log(`Server started on ${PORT}`);
 });
 
     // Serve Frontend
-app.use(express.static(path.join(__dirname, '../build')));
+// app.use(express.static(path.join(__dirname, '../build')));
 
-app.get('*', (req, res) => res.sendFile(__dirname, '../', 'build', 'index.html'));
+app.get('*', function(req, res) {
+    res.sendFile(
+        path.join(__dirname, "../build/index.html"),
+        function (err) {
+            if (err) {
+                res.status(500).send(err);
+            }
+        }
+    )
+});
 
     // Middleware
     // every incoming request body will be parsed in JSON format through app.use middleware function
